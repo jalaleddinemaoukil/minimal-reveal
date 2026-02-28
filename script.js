@@ -28,3 +28,32 @@ new SplitText(element, {
     });
   },
 });
+
+new SplitText(element, {
+  type: "lines, words",
+
+  autoSplit: true,
+
+  mask: "lines",
+
+  lineClass: "line",
+
+  onSplit: (self) => {
+    gsap.from(self.elements, {
+      opacity: 1,
+    });
+
+    return gsap.from(self.lines, {
+      duration: 1,
+      yPercent: 110,
+      stagger: 0.04,
+      ease: "expo.out",
+
+      scrollTrigger: {
+        trigger: self.element[0],
+        start: "top 88%",
+        once: true,
+      },
+    });
+  },
+});
