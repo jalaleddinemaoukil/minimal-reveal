@@ -1,18 +1,16 @@
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-new SplitText(element, {
+new SplitText(".reveal-title", {
   type: "words, chars",
 
   autoSplit: true,
 
   mask: "chars",
 
-  charClass: "char",
+  charsClass: "char",
 
   onSplit: (self) => {
-    gsap.from(self.elements, {
-      opacity: 1,
-    });
+    gsap.set(self.elements, { opacity: 1 });
 
     return gsap.from(self.chars, {
       duration: 1,
@@ -21,7 +19,7 @@ new SplitText(element, {
       stagger: 0.01,
       ease: "expo.out",
       scrollTrigger: {
-        trigger: self.element[0],
+        trigger: self.elements[0],
         start: "top 88%",
         once: true,
       },
@@ -29,28 +27,26 @@ new SplitText(element, {
   },
 });
 
-new SplitText(element, {
+new SplitText(".reveal-pargraph", {
   type: "lines, words",
 
   autoSplit: true,
 
   mask: "lines",
 
-  lineClass: "line",
+  linesClass: "line",
 
   onSplit: (self) => {
-    gsap.from(self.elements, {
-      opacity: 1,
-    });
+    gsap.set(self.elements, { opacity: 1 });
 
     return gsap.from(self.lines, {
-      duration: 1,
-      yPercent: 110,
+      duration: 0.9,
+      yPercent: 105,
       stagger: 0.04,
       ease: "expo.out",
 
       scrollTrigger: {
-        trigger: self.element[0],
+        trigger: self.elements[0],
         start: "top 88%",
         once: true,
       },
