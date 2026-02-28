@@ -1,32 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body, html {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+body,
+html {
+  font-family: "Inter Tight", sans-serif;
+
 }
 
-.spacer {
-    height: 100vh;
-    background: black;
+
+.text-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+}
+.container {
+  max-width: min(50%, 860px);
+  width: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 4rem;
+  padding: clamp(1.5rem, 4vw, 3rem);
+}
+
+.hero-container {
+  height: 100vh;
+  background-color: rgb(255, 255, 255);
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
 }
 
 .reveal-title {
-    font-size: 5rem;
-    font-weight: 600;
-    margin: 50px 0;
-    opacity: 0;
+  line-height: 1.1;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 600;
+  opacity: 0;
+  text-align: center;
 }
 
-.reveal-text {
-    font-size: 3rem;
-    font-weight: 400;
-    margin: 100px 0;
-    overflow: hidden;
-    position: relative;
-    opacity: 0;
+.reveal-pargraph {
+  width: 100%;
+  font-size: clamp(1rem, 2.5vw, 1.4rem);
+  line-height: 1.7;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    gap: 3rem;
+  }
+
+  .text-container {
+    padding: 3rem 1.5rem;
+  }
 }

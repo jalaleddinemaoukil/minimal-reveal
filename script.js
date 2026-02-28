@@ -15,9 +15,8 @@ new SplitText(".reveal-title", {
     return gsap.from(self.chars, {
       duration: 1,
       yPercent: -120,
-      scale: 1.2,
       stagger: 0.01,
-      ease: "expo.out",
+      ease: "power3.out",
       scrollTrigger: {
         trigger: self.elements[0],
         start: "top 88%",
@@ -43,7 +42,7 @@ new SplitText(".reveal-pargraph", {
       duration: 0.9,
       yPercent: 105,
       stagger: 0.04,
-      ease: "expo.out",
+      ease: "power3.out",
 
       scrollTrigger: {
         trigger: self.elements[0],
