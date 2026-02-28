@@ -9,3 +9,24 @@ body, html {
     flex-direction: column;
     align-items: center;
 }
+
+.spacer {
+    height: 100vh;
+    background: black;
+}
+
+.reveal-title {
+    font-size: 5rem;
+    font-weight: 600;
+    margin: 50px 0;
+    opacity: 0;
+}
+
+.reveal-text {
+    font-size: 3rem;
+    font-weight: 400;
+    margin: 100px 0;
+    overflow: hidden;
+    position: relative;
+    opacity: 0;
+}
